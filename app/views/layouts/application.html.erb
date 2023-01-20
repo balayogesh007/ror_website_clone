@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PracticeApp</title>
+    <title>tringapps</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,8 +14,15 @@
 
   <body>
     <%= render partial: "shared/navbar" %>
-    <div class="container">
+    <div>
         <%= yield %>
     </div>
+    <footer>
+      <div class="footer_header"><h3>Start your digital journey now!</h3></div>
+        <div class="footer_content">
+            <div>Your success is our success. Contact us today and get your project moving</div>
+            <div class="contact_details">xyz@tringapps.com | US: +1-123 456 7890 | India: +91-1234567890</div>
+        </div>
+    </footer>
   </body>
 </html>
