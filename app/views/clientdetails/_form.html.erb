@@ -1,0 +1,72 @@
+
+<%= form_for(@clientdetail) do |form| %>
+ <%
+=begin%>
+ <% if clientdetail.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h2><%= pluralize(clientdetail.errors.count, "error") %> prohibited this from being saved:</h2>
+      <ul>
+      <% clientdetail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%
+=end%>
+<div>
+  <div class="d-flex flex-row">
+    <div class="d-flex flex-column" style="margin-top: 2%; align-items: center; width: 70%">
+      <div><h2><i>CONTACT US</i></h2></div>
+      <div class= "mb-3">
+        <%= form.label :contact_name do %>
+          Contact Name <i class="fas fa-asterisk required_field"></i>
+        <% end -%>
+        <%= form.text_field :contact_name , class: "form-control", required: true%>
+      </div>
+
+      <div class= "mb-3">
+        <%= form.label :email_id do %>
+          Email <i class="fas fa-asterisk required_field"></i>
+        <% end -%>
+        <%= form.email_field :email_id, class: "form-control", required: true %>
+      </div>
+
+      <div class= "mb-3">
+        <%= form.label :company_name do %>
+          Company Name <i class="fas fa-asterisk required_field"></i>
+        <% end -%>
+        <%= form.text_field :company_name, class: "form-control", required: true %>
+      </div>
+
+      <div class= "mb-3">
+        <%= form.label :phonenumber do %>
+          Phone Number <i class="fas fa-asterisk required_field"></i>
+        <% end -%>
+        <%= form.text_field :phonenumber, class: "form-control", required: true %>
+      </div>
+
+      <div class= "mb-3">
+      <label>Message</label><i class="fas fa-asterisk required_field"></i>
+        <%= form.text_field :message, class: "form-control" %>
+      </div>
+
+      <div class= "mb-3">
+        <%= form.submit "Submit", class: "btn btn-success btn" %>
+      </div>
+    </div>
+    <div class="d-flex flex-row" style= "margin: 4%; width:100%;">
+      <div>
+        <%= image_tag("client_contact.png", :alt => "contact feed", :style => "width:500px; height: 300px;") %>
+      <div>
+      <div>
+        <div>
+          <h2>Ready to discuss your project?</h2>
+          <p style="margin-top: 3%;">We’re big fans of communication and love new experiences. We’re happy to answer any question you have or provide you with an estimate.
+          Just send us a message in the form with any questions you have.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
