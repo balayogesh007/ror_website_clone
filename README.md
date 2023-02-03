@@ -5,15 +5,15 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version <h4>2.7.7</h4>
 
-* System dependencies
+* System dependencies <h4>bundle install</h4>
 
 * Configuration
 
-* Database creation
+* Database creation 
 
-* Database initialization
+* Database initialization <h4>rails db:seed</h4> <h4>rails db:migrate</h4>
 
 * How to run the test suite
 
@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Start the Application <h4>rails s</h4>
+
+* Start in different port <h4>rails s -p PORT</h4>
